@@ -74,23 +74,26 @@ const AppHeader = ({ onLogoClick }) => {
             </h1>
           </div>
           
-          {/* Desktop Navigation */}
+{/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path
+              const isHome = item.path === '/'
               return (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                  className={`flex items-center space-x-2 px-5 py-3 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                     isActive
                       ? 'bg-primary text-white shadow-md'
-                      : 'text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light'
+                      : isHome 
+                        ? 'text-surface-700 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-600'
+                        : 'text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
-                  <ApperIcon name={item.icon} className="h-4 w-4" />
-                  <span className="font-medium">{item.label}</span>
+                  <ApperIcon name={item.icon} className={isHome ? "h-5 w-5" : "h-4 w-4"} />
+                  <span className={`font-medium ${isHome ? 'text-base' : ''}`}>{item.label}</span>
                 </Link>
               )
             })}
@@ -151,27 +154,29 @@ const AppHeader = ({ onLogoClick }) => {
               className="md:hidden overflow-hidden"
               role="navigation"
               aria-label="Mobile navigation"
-            >
+>
               <div className="pt-4 pb-2 space-y-1">
                 {navItems.map((item) => {
                   const isActive = location.pathname === item.path
+                  const isHome = item.path === '/'
                   return (
                     <Link
                       key={item.path}
                       to={item.path}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                      className={`flex items-center space-x-3 px-5 py-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                         isActive
                           ? 'bg-primary text-white shadow-md'
-                          : 'text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light'
+                          : isHome
+                            ? 'text-surface-700 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-600'
+                            : 'text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light'
                       }`}
                       aria-current={isActive ? 'page' : undefined}
                     >
-                      <ApperIcon name={item.icon} className="h-5 w-5" />
-                      <span className="font-medium text-base">{item.label}</span>
+                      <ApperIcon name={item.icon} className={isHome ? "h-6 w-6" : "h-5 w-5"} />
+                      <span className={`font-medium ${isHome ? 'text-lg' : 'text-base'}`}>{item.label}</span>
                     </Link>
                   )
                 })}
-                
                 {/* Mobile Auth & Actions */}
                 <div className="pt-3 mt-3 border-t border-surface-200 dark:border-surface-700 space-y-2">
                   <button
