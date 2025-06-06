@@ -92,6 +92,10 @@ class DeliveryService {
       capturedAt: new Date().toISOString()
     }))
     
-    return savedPhotos
+return savedPhotos
   }
 }
+
+// Create and export a singleton instance
+const deliveryService = new DeliveryService()
+export default deliveryService
