@@ -47,13 +47,11 @@ class DeliveryService {
     const index = this.deliveries.findIndex(d => d.id === id)
     if (index === -1) {
       throw new Error('Delivery not found')
-    }
+}
     
     const deleted = this.deliveries.splice(index, 1)[0]
-const deleted = this.deliveries.splice(index, 1)[0]
     return { ...deleted }
   }
-
   async completeDelivery(id, signatureData, photos = []) {
     await this.delay()
     const index = this.deliveries.findIndex(d => d.id === id)
