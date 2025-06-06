@@ -31,7 +31,29 @@
       rgba(59, 130, 246, 0.1) 30%,
       rgba(59, 130, 246, 0.1) 70%,
       transparent 70%
-    );
+);
+  }
+  
+  .mobile-menu-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .mobile-menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+  
+  .mobile-menu-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .mobile-menu-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
   }
 }
 
