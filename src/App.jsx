@@ -20,7 +20,7 @@ function App() {
           <Route path="/analytics" element={<Analytics />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </MainTemplate>
+</MainTemplate>
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -32,6 +32,10 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
+        className="mobile:top-4 mobile:right-4 mobile:left-4 mobile:w-auto"
+        toastClassName="mobile:text-sm mobile:p-3"
+        bodyClassName="mobile:text-sm"
+        progressClassName="mobile:h-1"
       />
     </Router>
   )

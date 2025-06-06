@@ -2,7 +2,40 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base {
+  /* Mobile-first base styles */
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: contain;
+    touch-action: manipulation;
+  }
+
+  /* Safe area handling for mobile devices */
+  #root {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Improve touch scrolling on iOS */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 @layer utilities {
+  /* Scrollbar utilities */
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -10,9 +43,55 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Mobile-optimized scrolling */
+  .scroll-smooth-mobile {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Touch-friendly utilities */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .tap-highlight-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Performance optimizations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .reduce-motion {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Mobile-specific animations */
+  .mobile-fade-in {
+    animation: mobileSlideUp 0.3s ease-out;
+  }
+
+  @keyframes mobileSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer components {
+  /* Camera components */
   .camera-flash {
     animation: flash 0.3s ease-in-out;
   }
@@ -31,9 +110,10 @@
       rgba(59, 130, 246, 0.1) 30%,
       rgba(59, 130, 246, 0.1) 70%,
       transparent 70%
-);
+    );
   }
   
+  /* Enhanced mobile menu animations */
   .mobile-menu-enter {
     opacity: 0;
     transform: translateY(-10px);
@@ -42,7 +122,8 @@
   .mobile-menu-enter-active {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                transform 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   .mobile-menu-exit {
@@ -53,12 +134,78 @@
   .mobile-menu-exit-active {
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    transition: opacity 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Mobile-optimized buttons */
+  .btn-mobile {
+    @apply touch-target tap-highlight-none;
+    @apply active:scale-95 transition-transform duration-150 ease-in-out;
+  }
+
+  /* Mobile-optimized cards */
+  .card-mobile {
+    @apply shadow-mobile-card;
+    @apply touch-target;
+  }
+
+  /* Mobile-optimized form inputs */
+  .input-mobile {
+    @apply touch-target;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Mobile navigation optimizations */
+  .nav-mobile {
+    @apply touch-target;
+    @apply active:bg-opacity-80 transition-all duration-150;
   }
 }
 
-@layer base {
-  body {
-    font-family: 'Inter', sans-serif;
+/* Responsive utility classes */
+@media (max-width: 767px) {
+  .text-responsive {
+    font-size: clamp(0.875rem, 4vw, 1rem);
+  }
+  
+  .heading-responsive {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: high) {
+  .btn-mobile {
+    border: 2px solid currentColor;
+  }
+  
+  .card-mobile {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Dark mode optimizations for mobile */
+@media (prefers-color-scheme: dark) {
+  .mobile-menu-enter-active,
+  .mobile-menu-exit-active {
+    backdrop-filter: blur(10px);
   }
 }

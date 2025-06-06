@@ -55,7 +55,7 @@ const AppHeader = ({ onLogoClick }) => {
       className="bg-white dark:bg-surface-800 shadow-card border-b border-surface-200 dark:border-surface-700 sticky top-0 z-50"
       role="banner"
     >
-      <div className="container mx-auto px-4 sm:px-6 py-4">
+<div className="container mx-auto container-mobile sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
@@ -80,10 +80,10 @@ const AppHeader = ({ onLogoClick }) => {
               const isActive = location.pathname === item.path
               const isHome = item.path === '/'
               return (
-                <Link
+<Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-5 py-3 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                  className={`nav-mobile flex items-center space-x-2 px-3 lg:px-5 py-2 lg:py-3 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                     isActive
                       ? 'bg-primary text-white shadow-md'
                       : isHome 
@@ -93,7 +93,7 @@ const AppHeader = ({ onLogoClick }) => {
                   aria-current={isActive ? 'page' : undefined}
                 >
                   <ApperIcon name={item.icon} className={isHome ? "h-5 w-5" : "h-4 w-4"} />
-                  <span className={`font-medium ${isHome ? 'text-base' : ''}`}>{item.label}</span>
+                  <span className={`font-medium text-sm lg:text-base ${isHome ? 'lg:text-base' : ''}`}>{item.label}</span>
                 </Link>
               )
             })}
@@ -160,10 +160,10 @@ const AppHeader = ({ onLogoClick }) => {
                   const isActive = location.pathname === item.path
                   const isHome = item.path === '/'
                   return (
-                    <Link
+<Link
                       key={item.path}
                       to={item.path}
-                      className={`flex items-center space-x-3 px-5 py-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                      className={`nav-mobile flex items-center space-x-3 px-4 py-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                         isActive
                           ? 'bg-primary text-white shadow-md'
                           : isHome

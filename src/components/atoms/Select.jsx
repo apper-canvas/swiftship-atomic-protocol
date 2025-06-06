@@ -5,7 +5,7 @@ import React from 'react'
           <select
             value={value}
             onChange={onChange}
-            className={`px-4 py-3 rounded-xl border border-surface-300 dark:border-surface-600 bg-white dark:bg-surface-700 text-surface-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary ${className}`}
+className={`input-mobile px-4 py-3 rounded-xl border border-surface-300 dark:border-surface-600 bg-white dark:bg-surface-700 text-surface-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary tap-highlight-none ${className}`}
             {...props}
           >
             {options.map((option) => (

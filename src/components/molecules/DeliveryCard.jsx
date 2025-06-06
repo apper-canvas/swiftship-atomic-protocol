@@ -20,11 +20,11 @@ import React from 'react'
         }
         const nextStatus = nextStatusMap[delivery.status]
 
-        return (
+return (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-surface-50 dark:bg-surface-700 rounded-xl p-6 border border-surface-200 dark:border-surface-600"
+            className="bg-surface-50 dark:bg-surface-700 rounded-xl p-4 sm:p-6 border border-surface-200 dark:border-surface-600 card-mobile"
           >
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div className="flex-1">
@@ -51,23 +51,24 @@ import React from 'react'
                   </div>
                 </div>
               </div>
-              
-              <div className="flex gap-2">
+<div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                 {delivery.status === 'out_for_delivery' && (
                   <Button
                     onClick={() => onCaptureSignature(delivery)}
-                    className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                    className="btn-mobile flex-1 sm:flex-none px-4 py-3 sm:py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm sm:text-base"
                   >
-                    <ApperIcon name="PenTool" className="h-4 w-4" />
+                    <ApperIcon name="PenTool" className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Sign</span>
                   </Button>
                 )}
                 
                 {delivery.status !== 'delivered' && (
                   <Button
                     onClick={() => nextStatus && onUpdateStatus(delivery.id, nextStatus)}
-                    className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark"
+                    className="btn-mobile flex-1 sm:flex-none px-4 py-3 sm:py-2 bg-primary text-white rounded-lg hover:bg-primary-dark text-sm sm:text-base"
                   >
-                    <ApperIcon name="ArrowRight" className="h-4 w-4" />
+                    <ApperIcon name="ArrowRight" className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Next</span>
                   </Button>
                 )}
               </div>

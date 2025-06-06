@@ -28,13 +28,13 @@ import React from 'react'
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.3 }}
-            className="p-8"
+className="p-4 sm:p-8"
           >
             <h3 className="text-2xl font-bold text-surface-900 dark:text-white mb-6">
               Book New Delivery
             </h3>
             
-            <form onSubmit={onSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<form onSubmit={onSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Pickup Address */}
               <div className="space-y-4">
                 <CardHeader iconName="MapPin" iconClass="text-primary" title="Pickup Address" />
@@ -106,11 +106,11 @@ import React from 'react'
                 </div>
               </div>
 
-              <div className="lg:col-span-2">
+<div className="lg:col-span-2">
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-primary to-primary-light text-white shadow-lg hover:shadow-xl"
+                  className="btn-mobile w-full md:w-auto px-6 sm:px-8 py-4 bg-gradient-to-r from-primary to-primary-light text-white shadow-lg hover:shadow-xl text-base sm:text-lg"
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center">
