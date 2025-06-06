@@ -57,19 +57,18 @@ const ActiveDeliveriesList = ({ deliveries, onUpdateStatus, onCaptureSignature }
     }
   }
 
-  const handleSignatureCancel = () => {
+const handleSignatureCancel = () => {
     setSignatureModal({
       isOpen: false,
       deliveryId: null,
       signature: ''
-    })
-})
-}
+    });
+  };
 
-return (
-  <motion.div
-    key="track"
-    initial={{ opacity: 0, x: -20 }}
+  return (
+    <motion.div
+      key="track"
+      initial={{ opacity: 0, x: -20 }}
     animate={{ opacity: 1, x: 0 }}
     exit={{ opacity: 0, x: 20 }}
     transition={{ duration: 0.3 }}
