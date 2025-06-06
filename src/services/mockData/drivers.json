@@ -1,0 +1,212 @@
+[
+  {
+    "id": "1",
+    "name": "Marcus Rodriguez",
+    "phone": "+1 (555) 123-4567",
+    "email": "marcus.rodriguez@swiftship.com",
+    "vehicle": {
+      "type": "Van",
+      "licensePlate": "SS-001",
+      "capacity": "Large packages"
+    },
+    "location": {
+      "lat": 40.7589,
+      "lng": -73.9851,
+      "address": "Times Square, Manhattan"
+    },
+    "activeDeliveries": ["4", "7"],
+    "rating": 4.8,
+    "totalDeliveries": 1247,
+    "status": "active",
+    "joinedDate": "2023-03-15"
+  },
+  {
+    "id": "2",
+    "name": "Sarah Chen",
+    "phone": "+1 (555) 234-5678",
+    "email": "sarah.chen@swiftship.com",
+    "vehicle": {
+      "type": "Motorcycle",
+      "licensePlate": "SS-002",
+      "capacity": "Documents and small packages"
+    },
+    "location": {
+      "lat": 40.6892,
+      "lng": -74.0445,
+      "address": "Brooklyn Bridge, Brooklyn"
+    },
+    "activeDeliveries": ["2", "8"],
+    "rating": 4.9,
+    "totalDeliveries": 892,
+    "status": "active",
+    "joinedDate": "2023-06-22"
+  },
+  {
+    "id": "3",
+    "name": "David Thompson",
+    "phone": "+1 (555) 345-6789",
+    "email": "david.thompson@swiftship.com",
+    "vehicle": {
+      "type": "Truck",
+      "licensePlate": "SS-003",
+      "capacity": "Heavy and oversized items"
+    },
+    "location": {
+      "lat": 40.8176,
+      "lng": -73.9782,
+      "address": "Washington Heights, Manhattan"
+    },
+    "activeDeliveries": ["3", "9"],
+    "rating": 4.7,
+    "totalDeliveries": 675,
+    "status": "active",
+    "joinedDate": "2023-01-08"
+  },
+  {
+    "id": "4",
+    "name": "Lisa Park",
+    "phone": "+1 (555) 456-7890",
+    "email": "lisa.park@swiftship.com",
+    "vehicle": {
+      "type": "Electric Van",
+      "licensePlate": "SS-004",
+      "capacity": "Medium packages"
+    },
+    "location": {
+      "lat": 40.7505,
+      "lng": -73.9934,
+      "address": "Penn Station, Manhattan"
+    },
+    "activeDeliveries": [],
+    "rating": 4.9,
+    "totalDeliveries": 543,
+    "status": "available",
+    "joinedDate": "2023-08-14"
+  },
+  {
+    "id": "5",
+    "name": "James Wilson",
+    "phone": "+1 (555) 567-8901",
+    "email": "james.wilson@swiftship.com",
+    "vehicle": {
+      "type": "Cargo Bike",
+      "licensePlate": "SS-005",
+      "capacity": "Small packages and documents"
+    },
+    "location": {
+      "lat": 40.7282,
+      "lng": -73.7949,
+      "address": "Flushing, Queens"
+    },
+    "activeDeliveries": [],
+    "rating": 4.6,
+    "totalDeliveries": 789,
+    "status": "available",
+    "joinedDate": "2023-04-30"
+  },
+  {
+    "id": "6",
+    "name": "Emily Garcia",
+    "phone": "+1 (555) 678-9012",
+    "email": "emily.garcia@swiftship.com",
+    "vehicle": {
+      "type": "SUV",
+      "licensePlate": "SS-006",
+      "capacity": "Various package sizes"
+    },
+    "location": {
+      "lat": 40.5795,
+      "lng": -74.1502,
+      "address": "St. George, Staten Island"
+    },
+    "activeDeliveries": [],
+    "rating": 4.8,
+    "totalDeliveries": 456,
+    "status": "off_duty",
+    "joinedDate": "2023-09-11"
+  },
+  {
+    "id": "7",
+    "name": "Robert Kim",
+    "phone": "+1 (555) 789-0123",
+    "email": "robert.kim@swiftship.com",
+    "vehicle": {
+      "type": "Van",
+      "licensePlate": "SS-007",
+      "capacity": "Large packages"
+    },
+    "location": {
+      "lat": 40.8448,
+      "lng": -73.8648,
+      "address": "Fordham, Bronx"
+    },
+    "activeDeliveries": [],
+    "rating": 4.7,
+    "totalDeliveries": 923,
+    "status": "available",
+    "joinedDate": "2023-02-17"
+  },
+  {
+    "id": "8",
+    "name": "Anna Petrov",
+    "phone": "+1 (555) 890-1234",
+    "email": "anna.petrov@swiftship.com",
+    "vehicle": {
+      "type": "Motorcycle",
+      "licensePlate": "SS-008",
+      "capacity": "Express deliveries"
+    },
+    "location": {
+      "lat": 40.7831,
+      "lng": -73.9712,
+      "address": "Upper West Side, Manhattan"
+    },
+    "activeDeliveries": [],
+    "rating": 4.9,
+    "totalDeliveries": 1156,
+    "status": "active",
+    "joinedDate": "2022-11-25"
+  },
+  {
+    "id": "9",
+    "name": "Carlos Martinez",
+    "phone": "+1 (555) 901-2345",
+    "email": "carlos.martinez@swiftship.com",
+    "vehicle": {
+      "type": "Truck",
+      "licensePlate": "SS-009",
+      "capacity": "Heavy freight"
+    },
+    "location": {
+      "lat": 40.6602,
+      "lng": -73.8370,
+      "address": "Jamaica, Queens"
+    },
+    "activeDeliveries": [],
+    "rating": 4.6,
+    "totalDeliveries": 634,
+    "status": "available",
+    "joinedDate": "2023-05-03"
+  },
+  {
+    "id": "10",
+    "name": "Michelle Lee",
+    "phone": "+1 (555) 012-3456",
+    "email": "michelle.lee@swiftship.com",
+    "vehicle": {
+      "type": "Electric Van",
+      "licensePlate": "SS-010",
+      "capacity": "Eco-friendly deliveries"
+    },
+    "location": {
+      "lat": 40.6782,
+      "lng": -73.9442,
+      "address": "Prospect Heights, Brooklyn"
+    },
+    "activeDeliveries": [],
+    "rating": 4.8,
+    "totalDeliveries": 378,
+    "status": "available",
+    "joinedDate": "2023-07-19"
+  }
+]

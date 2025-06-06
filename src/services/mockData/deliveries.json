@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "pickupAddress": {
+      "street": "123 Business Ave",
+      "city": "New York",
+      "zipCode": "10001"
+    },
+    "deliveryAddress": {
+      "street": "456 Residential St",
+      "city": "Brooklyn",
+      "zipCode": "11201"
+    },
+    "status": "delivered",
+    "driverId": "1",
+    "eta": "2024-12-19T16:30:00Z",
+    "signature": "John Smith",
+    "packageType": "document",
+    "notes": "Handle with care",
+    "createdAt": "2024-12-19T08:00:00Z"
+  },
+  {
+    "id": "2",
+    "pickupAddress": {
+      "street": "789 Corporate Blvd",
+      "city": "Manhattan",
+      "zipCode": "10019"
+    },
+    "deliveryAddress": {
+      "street": "321 Home Lane",
+      "city": "Queens",
+      "zipCode": "11375"
+    },
+    "status": "out_for_delivery",
+    "driverId": "2",
+    "eta": "2024-12-19T18:00:00Z",
+    "signature": null,
+    "packageType": "small_package",
+    "notes": "Ring doorbell twice",
+    "createdAt": "2024-12-19T09:15:00Z"
+  },
+  {
+    "id": "3",
+    "pickupAddress": {
+      "street": "555 Industrial Way",
+      "city": "Bronx",
+      "zipCode": "10451"
+    },
+    "deliveryAddress": {
+      "street": "888 Park Avenue",
+      "city": "Manhattan",
+      "zipCode": "10075"
+    },
+    "status": "in_transit",
+    "driverId": "3",
+    "eta": "2024-12-19T19:30:00Z",
+    "signature": null,
+    "packageType": "medium_package",
+    "notes": "Fragile electronics",
+    "createdAt": "2024-12-19T10:30:00Z"
+  },
+  {
+    "id": "4",
+    "pickupAddress": {
+      "street": "999 Warehouse District",
+      "city": "Staten Island",
+      "zipCode": "10301"
+    },
+    "deliveryAddress": {
+      "street": "111 Suburban Circle",
+      "city": "Long Island",
+      "zipCode": "11501"
+    },
+    "status": "picked_up",
+    "driverId": "1",
+    "eta": "2024-12-19T20:45:00Z",
+    "signature": null,
+    "packageType": "large_package",
+    "notes": "Heavy item - use loading dock",
+    "createdAt": "2024-12-19T11:45:00Z"
+  },
+  {
+    "id": "5",
+    "pickupAddress": {
+      "street": "222 Tech Hub",
+      "city": "Brooklyn",
+      "zipCode": "11222"
+    },
+    "deliveryAddress": {
+      "street": "333 University Row",
+      "city": "Manhattan",
+      "zipCode": "10003"
+    },
+    "status": "pickup_scheduled",
+    "driverId": "2",
+    "eta": "2024-12-19T22:00:00Z",
+    "signature": null,
+    "packageType": "document",
+    "notes": "Legal documents - signature required",
+    "createdAt": "2024-12-19T12:00:00Z"
+  },
+  {
+    "id": "6",
+    "pickupAddress": {
+      "street": "444 Medical Center",
+      "city": "Queens",
+      "zipCode": "11420"
+    },
+    "deliveryAddress": {
+      "street": "555 Clinic Drive",
+      "city": "Bronx",
+      "zipCode": "10467"
+    },
+    "status": "delivered",
+    "driverId": "3",
+    "eta": "2024-12-19T14:30:00Z",
+    "signature": "Dr. Sarah Johnson",
+    "packageType": "small_package",
+    "notes": "Medical supplies - temperature sensitive",
+    "createdAt": "2024-12-19T07:30:00Z"
+  },
+  {
+    "id": "7",
+    "pickupAddress": {
+      "street": "666 Fashion District",
+      "city": "Manhattan",
+      "zipCode": "10018"
+    },
+    "deliveryAddress": {
+      "street": "777 Boutique Street",
+      "city": "Brooklyn",
+      "zipCode": "11201"
+    },
+    "status": "in_transit",
+    "driverId": "1",
+    "eta": "2024-12-19T17:15:00Z",
+    "signature": null,
+    "packageType": "medium_package",
+    "notes": "Designer clothing - handle with care",
+    "createdAt": "2024-12-19T13:20:00Z"
+  },
+  {
+    "id": "8",
+    "pickupAddress": {
+      "street": "888 Food Market",
+      "city": "Queens",
+      "zipCode": "11354"
+    },
+    "deliveryAddress": {
+      "street": "999 Restaurant Row",
+      "city": "Manhattan",
+      "zipCode": "10036"
+    },
+    "status": "picked_up",
+    "driverId": "2",
+    "eta": "2024-12-19T21:30:00Z",
+    "signature": null,
+    "packageType": "small_package",
+    "notes": "Perishable goods - refrigerated transport",
+    "createdAt": "2024-12-19T14:45:00Z"
+  },
+  {
+    "id": "9",
+    "pickupAddress": {
+      "street": "111 Art Gallery",
+      "city": "Brooklyn",
+      "zipCode": "11205"
+    },
+    "deliveryAddress": {
+      "street": "222 Museum Mile",
+      "city": "Manhattan",
+      "zipCode": "10128"
+    },
+    "status": "pickup_scheduled",
+    "driverId": "3",
+    "eta": "2024-12-20T10:00:00Z",
+    "signature": null,
+    "packageType": "large_package",
+    "notes": "Artwork - extremely fragile",
+    "createdAt": "2024-12-19T15:30:00Z"
+  },
+  {
+    "id": "10",
+    "pickupAddress": {
+      "street": "333 Electronics Store",
+      "city": "Staten Island",
+      "zipCode": "10314"
+    },
+    "deliveryAddress": {
+      "street": "444 Tech Office",
+      "city": "Manhattan",
+      "zipCode": "10013"
+    },
+    "status": "delivered",
+    "driverId": "1",
+    "eta": "2024-12-19T13:00:00Z",
+    "signature": "Mike Chen",
+    "packageType": "medium_package",
+    "notes": "Server equipment - keep level",
+    "createdAt": "2024-12-19T06:45:00Z"
+  }
+]
