@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify'
 import { motion, AnimatePresence } from 'framer-motion'
 import 'react-toastify/dist/ReactToastify.css'
 
-import Home from './pages/Home'
+import HomePage from '@/components/pages/HomePage'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <Home />
+<HomePage />
               </motion.div>
             } 
           />
