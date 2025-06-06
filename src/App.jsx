@@ -1,47 +1,26 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import MainTemplate from '@/components/templates/MainTemplate'
+import HomePage from '@/components/pages/HomePage'
+import Dashboard from '@/components/pages/Dashboard'
+import Tracking from '@/components/pages/Tracking'
+import Analytics from '@/components/pages/Analytics'
+import NotFound from '@/pages/NotFound'
 import { ToastContainer } from 'react-toastify'
-import { motion, AnimatePresence } from 'framer-motion'
 import 'react-toastify/dist/ReactToastify.css'
 
-import HomePage from '@/components/pages/HomePage'
-import NotFound from './pages/NotFound'
-
 function App() {
-  const location = useLocation()
-
   return (
-    <div className="min-h-screen bg-surface-50 dark:bg-surface-900 transition-colors duration-300">
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route 
-            path="/" 
-            element={
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-<HomePage />
-              </motion.div>
-            } 
-          />
-          <Route 
-            path="*" 
-            element={
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <NotFound />
-              </motion.div>
-            } 
-          />
+    <Router>
+      <MainTemplate>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/tracking" element={<Tracking />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </AnimatePresence>
-      
+      </MainTemplate>
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -52,10 +31,9 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="colored"
-        className="mt-16"
+        theme="light"
       />
-    </div>
+    </Router>
   )
 }
 
