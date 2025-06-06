@@ -184,7 +184,7 @@ return (
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="container-mobile sm:px-6 lg:px-8 py-6 sm:py-12"
+className="container-mobile sm:px-6 lg:px-8 py-4 sm:py-8"
           >
             <div className="max-w-7xl mx-auto">
               <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />

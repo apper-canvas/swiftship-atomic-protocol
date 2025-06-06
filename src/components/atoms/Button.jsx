@@ -9,7 +9,7 @@ const Button = ({ children, className, onClick, type = 'button', disabled, while
             type={type}
             onClick={onClick}
             disabled={disabled}
-            className={`btn-mobile flex items-center justify-center font-semibold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed tap-highlight-none ${className}`}
+className={`btn-mobile flex items-center justify-center font-medium text-sm rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed tap-highlight-none ${className}`}
             {...props}
           >
             {children}

@@ -69,7 +69,7 @@ const AppHeader = ({ onLogoClick }) => {
             <div className="bg-gradient-to-r from-primary to-primary-light p-2 rounded-xl group-hover:shadow-lg group-focus:shadow-lg transition-all duration-200">
               <ApperIcon name="Truck" className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+<h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
               SwiftShip
             </h1>
           </div>
@@ -92,8 +92,8 @@ const AppHeader = ({ onLogoClick }) => {
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
-                  <ApperIcon name={item.icon} className={isHome ? "h-5 w-5" : "h-4 w-4"} />
-                  <span className={`font-medium text-sm lg:text-base ${isHome ? 'lg:text-base' : ''}`}>{item.label}</span>
+<ApperIcon name={item.icon} className="h-4 w-4" />
+                  <span className="font-medium text-xs sm:text-sm">{item.label}</span>
                 </Link>
               )
             })}
@@ -172,8 +172,8 @@ const AppHeader = ({ onLogoClick }) => {
                       }`}
                       aria-current={isActive ? 'page' : undefined}
                     >
-                      <ApperIcon name={item.icon} className={isHome ? "h-6 w-6" : "h-5 w-5"} />
-                      <span className={`font-medium ${isHome ? 'text-lg' : 'text-base'}`}>{item.label}</span>
+<ApperIcon name={item.icon} className="h-4 w-4" />
+                      <span className="font-medium text-sm">{item.label}</span>
                     </Link>
                   )
                 })}
@@ -183,15 +183,15 @@ const AppHeader = ({ onLogoClick }) => {
                     className="w-full flex items-center space-x-3 px-4 py-3 text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     aria-label="Notifications"
                   >
-                    <ApperIcon name="Bell" className="h-5 w-5" />
-                    <span className="font-medium text-base">Notifications</span>
+<ApperIcon name="Bell" className="h-4 w-4" />
+                    <span className="font-medium text-sm">Notifications</span>
                   </button>
                   <button
                     className="w-full flex items-center space-x-3 px-4 py-3 text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700 hover:text-primary dark:hover:text-primary-light rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     aria-label="Settings"
                   >
-                    <ApperIcon name="Settings" className="h-5 w-5" />
-                    <span className="font-medium text-base">Settings</span>
+<ApperIcon name="Settings" className="h-4 w-4" />
+                    <span className="font-medium text-sm">Settings</span>
                   </button>
                   <button
                     onClick={handleAuth}
@@ -202,8 +202,8 @@ const AppHeader = ({ onLogoClick }) => {
                     }`}
                     aria-label={isAuthenticated ? "Logout" : "Login"}
                   >
-                    <ApperIcon name={isAuthenticated ? "LogOut" : "LogIn"} className="h-5 w-5" />
-                    <span className="font-medium text-base">{isAuthenticated ? "Logout" : "Login"}</span>
+<ApperIcon name={isAuthenticated ? "LogOut" : "LogIn"} className="h-4 w-4" />
+                    <span className="font-medium text-sm">{isAuthenticated ? "Logout" : "Login"}</span>
                   </button>
                 </div>
               </div>

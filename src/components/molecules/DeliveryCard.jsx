@@ -55,9 +55,9 @@ return (
                 {delivery.status === 'out_for_delivery' && (
                   <Button
                     onClick={() => onCaptureSignature(delivery)}
-                    className="btn-mobile flex-1 sm:flex-none px-4 py-3 sm:py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm sm:text-base"
+className="btn-mobile flex-1 sm:flex-none px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-xs sm:text-sm"
                   >
-                    <ApperIcon name="PenTool" className="h-4 w-4 sm:mr-2" />
+                    <ApperIcon name="PenTool" className="h-3 w-3 sm:h-4 sm:w-4 sm:mr-2" />
                     <span className="hidden sm:inline">Sign</span>
                   </Button>
                 )}
@@ -65,9 +65,9 @@ return (
                 {delivery.status !== 'delivered' && (
                   <Button
                     onClick={() => nextStatus && onUpdateStatus(delivery.id, nextStatus)}
-                    className="btn-mobile flex-1 sm:flex-none px-4 py-3 sm:py-2 bg-primary text-white rounded-lg hover:bg-primary-dark text-sm sm:text-base"
+className="btn-mobile flex-1 sm:flex-none px-3 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark text-xs sm:text-sm"
                   >
-                    <ApperIcon name="ArrowRight" className="h-4 w-4 sm:mr-2" />
+                    <ApperIcon name="ArrowRight" className="h-3 w-3 sm:h-4 sm:w-4 sm:mr-2" />
                     <span className="hidden sm:inline">Next</span>
                   </Button>
                 )}

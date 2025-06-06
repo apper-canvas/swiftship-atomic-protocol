@@ -30,7 +30,7 @@ import React from 'react'
             transition={{ duration: 0.3 }}
 className="p-4 sm:p-8"
           >
-            <h3 className="text-2xl font-bold text-surface-900 dark:text-white mb-6">
+<h3 className="text-lg sm:text-xl font-bold text-surface-900 dark:text-white mb-4 sm:mb-6">
               Book New Delivery
             </h3>
             
@@ -110,7 +110,7 @@ className="p-4 sm:p-8"
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="btn-mobile w-full md:w-auto px-6 sm:px-8 py-4 bg-gradient-to-r from-primary to-primary-light text-white shadow-lg hover:shadow-xl text-base sm:text-lg"
+className="btn-mobile w-full md:w-auto px-4 sm:px-6 py-3 bg-gradient-to-r from-primary to-primary-light text-white shadow-lg hover:shadow-xl text-sm sm:text-base"
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center">

@@ -45,10 +45,10 @@ import React from 'react'
           >
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-surface-900 dark:text-white mb-4">
+<h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-surface-900 dark:text-white mb-4">
                   Complete Delivery Solution
                 </h2>
-                <p className="text-lg text-surface-600 dark:text-surface-300">
+<p className="text-sm sm:text-base md:text-lg text-surface-600 dark:text-surface-300">
                   Everything you need to manage courier operations efficiently
                 </p>
               </div>

@@ -12,13 +12,13 @@ import React from 'react'
             className="relative px-4 sm:px-6 lg:px-8 py-12 lg:py-16"
           >
             <div className="max-w-7xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-surface-900 dark:text-white mb-6">
+<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-6">
                 Smart Courier
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   Management
                 </span>
               </h1>
-              <p className="text-xl text-surface-600 dark:text-surface-300 max-w-3xl mx-auto mb-8">
+<p className="text-sm sm:text-base md:text-lg text-surface-600 dark:text-surface-300 max-w-3xl mx-auto mb-8">
                 Streamline your delivery operations with intelligent route optimization,
                 real-time tracking, and automated dispatch management.
               </p>

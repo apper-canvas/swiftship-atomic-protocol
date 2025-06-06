@@ -13,10 +13,10 @@ import React from 'react'
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
               <ApperIcon name={icon} className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="text-lg font-semibold text-surface-900 dark:text-white mb-2">
+<h3 className="text-base sm:text-lg font-semibold text-surface-900 dark:text-white mb-2">
               {title}
             </h3>
-            <p className="text-surface-600 dark:text-surface-300">
+<p className="text-sm sm:text-base text-surface-600 dark:text-surface-300">
               {description}
             </p>
           </motion.div>

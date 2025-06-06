@@ -19,7 +19,7 @@ import React from 'react'
             transition={{ duration: 0.3 }}
             className="p-8"
           >
-            <h3 className="text-2xl font-bold text-surface-900 dark:text-white mb-6">
+<h3 className="text-lg sm:text-xl font-bold text-surface-900 dark:text-white mb-4 sm:mb-6">
               Payment Processing
             </h3>
             
@@ -29,8 +29,8 @@ import React from 'react'
                   <span className="text-sm opacity-90">Delivery Fee</span>
                   <ApperIcon name="CreditCard" className="h-6 w-6" />
                 </div>
-                <div className="text-3xl font-bold">$25.99</div>
-                <div className="text-sm opacity-90 mt-2">Standard delivery rate</div>
+<div className="text-xl sm:text-2xl font-bold">$25.99</div>
+                <div className="text-xs sm:text-sm opacity-90 mt-2">Standard delivery rate</div>
               </div>
 
               <form className="space-y-4">

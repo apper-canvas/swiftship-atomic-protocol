@@ -12,8 +12,8 @@ import React from 'react'
                 : 'text-surface-600 dark:text-surface-300 hover:text-primary'
             }`}
           >
-            <ApperIcon name={icon} className="mr-2 h-5 w-5" />
-            <span className="hidden sm:inline">{label}</span>
+<ApperIcon name={icon} className="mr-2 h-4 w-4" />
+            <span className="hidden sm:inline text-sm">{label}</span>
           </button>
         )
       }

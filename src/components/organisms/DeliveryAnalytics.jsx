@@ -31,7 +31,7 @@ import React from 'react'
             transition={{ duration: 0.3 }}
             className="p-8"
           >
-            <h3 className="text-2xl font-bold text-surface-900 dark:text-white mb-6">
+<h3 className="text-lg sm:text-xl font-bold text-surface-900 dark:text-white mb-4 sm:mb-6">
               Delivery Analytics
             </h3>
             

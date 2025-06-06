@@ -8,7 +8,7 @@ const IconButton = ({ iconName, iconClass, onClick, className, whileHover = { sc
             onClick={onClick}
             whileHover={whileHover}
             whileTap={whileTap}
-            className={`btn-mobile p-2 sm:p-3 rounded-lg transition-colors tap-highlight-none ${className}`}
+className={`btn-mobile p-2 rounded-lg transition-colors tap-highlight-none ${className}`}
             {...props}
           >
             <ApperIcon name={iconName} className={iconClass} />

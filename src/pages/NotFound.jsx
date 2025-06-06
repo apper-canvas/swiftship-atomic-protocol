@@ -22,29 +22,29 @@ function NotFound() {
           </div>
         </motion.div>
         
-        <motion.h1 
+<motion.h1 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-6xl font-bold text-surface-900 dark:text-white mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-surface-900 dark:text-white mb-4"
         >
           404
         </motion.h1>
         
-        <motion.h2 
+<motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-2xl font-semibold text-surface-700 dark:text-surface-300 mb-4"
+          className="text-lg sm:text-xl md:text-2xl font-semibold text-surface-700 dark:text-surface-300 mb-4"
         >
           Package Not Found
         </motion.h2>
         
-        <motion.p 
+<motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-surface-600 dark:text-surface-400 mb-8"
+          className="text-sm sm:text-base text-surface-600 dark:text-surface-400 mb-8"
         >
           Looks like this delivery got lost in transit. Let's get you back on the right route.
         </motion.p>
